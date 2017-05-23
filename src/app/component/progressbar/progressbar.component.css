@@ -4,9 +4,7 @@ div.progress{
   line-height:2em;
   height: 50px;
   font-weight:bold;
-}
-div.progress-bar-animated{
-  height:100%;
+  width: 100%;
 }
 span.textProgressBarMid, span.textProgressBarRight{
   margin-left:2em;

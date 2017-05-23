@@ -10,25 +10,5 @@ import "rxjs/add/operator/map";
 })
 export class AppComponent{
   title = 'Title of app-component';
-  //peers: Peer[]=[];
-
-
-
- // constructor(private http:Http){}
-/*
-  ngOnInit(){
-    this.http.get("/api/blockchain/getPeersOfNode").map(result => result.json()["peers"]).subscribe(
-      result => { for(var key in result){
-                    var value = result[key];
-                    //console.log(value);
-                    this.peers.push(value);
-                  }
-    },
-      error =>  {console.log(error as string);}
-    );
-  }
-*/
-
-
 
 }

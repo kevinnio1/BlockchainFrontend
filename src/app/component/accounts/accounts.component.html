@@ -1,0 +1,15 @@
+<div class="accountscomponent" *ngIf="isAdminAccount">
+<h2>ACCOUNT COMPONENT</h2>
+  <div class="ui segment">
+    <div class="ui segment">
+      <md-list class="divided">
+        <md-list-item *ngFor="let a of accounts; let i = index"  >Account {{i+1}}: {{a}}
+        </md-list-item>
+      </md-list>
+  </div>
+</div>
+</div>
+
+
+
+

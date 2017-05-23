@@ -1,0 +1,13 @@
+.column {
+  max-width: 450px;
+}
+.image {
+  margin-top: -100px;
+}
+.grid {
+  height: 100%;
+  /*background-color: #1b1c1d;*/
+}
+sm-input{
+  width: 100%;
+}

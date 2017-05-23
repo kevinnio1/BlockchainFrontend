@@ -1,0 +1,14 @@
+div.contractComponent{
+  margin-top:3em;
+}
+div.aligneren{
+  text-align: center;
+}
+div.inlineContract{
+  max-width:33%;
+  display:inline-block;
+}
+div.setnewAdmin, div.removeAdmin{
+  margin-left:0.8em;
+  margin-bottom:1em;
+}

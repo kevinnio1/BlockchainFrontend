@@ -1,0 +1,62 @@
+<div class="vendingcomponent">
+  <div class="dimmable">
+  <md-spinner class="inverted" text="Waiting till block is mined..."></md-spinner>
+<h1>Vending Component</h1>
+
+<div class="ui segment">
+  <div class="ui segment">
+    <md-list class="divided">
+      <div class="adminDiv" *ngIf="isAdminVending">
+      <md-list-item>
+<div class="refill inlineVending">
+<form class="ui form" #refillForm="ngForm" (ngSubmit)="submitRefill()">
+  <div id="enterAmount" class="ui input">
+    <input type="number" label="amount" min="1" name="amount" id="amount" [(ngModel)]="amount">
+  </div>
+  <div id="btnRefill"><button md-button  type="submit" class="primary">Refill Machine</button></div>
+</form>
+</div>
+        <div class="setMinStock inlineVending">
+          <form class="ui form" #refillForm="ngForm" (ngSubmit)="submitMin()">
+            <div id="setMinStock" class="ui input" >
+              <input type="number" label="amountMinStock" min="1" name="amountMinStock" id="amountMinStock"[(ngModel)]="amountMinStock" >
+            </div>
+            <div id="btnSetMinStock" style="display: inline-block;"><button md-button  type="submit" class="primary" >Set Min Stock</button></div>
+          </form>
+        </div>
+
+        <div class="setMaxStock inlineVending">
+          <form class="ui form" #refillForm="ngForm" (ngSubmit)="submitMax()">
+            <div id="setMaxStock" class="ui input" >
+              <input type="number" label="amountMaxStock" min="2" name="amountMaxStock" id="amountMaxStock" [(ngModel)]="amountMaxStock">
+            </div>
+            <div id="btnSetMaxStock" style="display: inline-block;"><button md-button  type="submit" class="primary">Set Max Stock</button></div>
+          </form>
+        </div>
+        <br />
+      </md-list-item>
+      </div>
+      <md-list-item>
+
+  <br />
+
+  <br />
+
+  <progressbar-component [stockProgress]='stock' [maxStockProgress]='maxStock' [minStockProgress]='minStock' [isAdminProgress]='isAdminVending'></progressbar-component>
+      </md-list-item>
+  <br />
+
+<div>
+  <md-spinner class="inverted" text="Waiting till block is mined. can take a while..."></md-spinner>
+  <form class="ui form buyOne" #refillForm="ngForm" (ngSubmit)="submitBuyOne()">
+    <div id="btnBuy"><button md-button  type="submit" class="buyOnebtn primary">Buy One</button></div>
+  </form>
+</div>
+
+    </md-list>
+
+
+  </div>
+</div>
+</div>
+</div>

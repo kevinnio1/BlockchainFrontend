@@ -1,0 +1,44 @@
+
+<div class="contractComponent" *ngIf="isAdminContract">
+  <h2>CONTRACT COMPONENT: </h2><p><strong>All input boxes require the valid walletID</strong></p>
+  <div class="ui segment aligneren">
+    <div class="ui segment">
+      <md-spinner class="inverted" text="Waiting till block is mined..."></md-spinner>
+      <md-list class="divided">
+       <md-list-item>
+         <div class="setSupplier inlineContract">
+           <form class="ui form" #supplierForm="ngForm" (ngSubmit)="submitSupplier()">
+             <div id="setSupplier" class="ui input" >
+               <input type="text" label="supplierID" name="supplierID" id="supplierID" [(ngModel)]="supplierID">
+             </div>
+             <div id="btnSetSupplier" style="display: inline-block;"><button md-button type="submit" class="primary">Set Supplier</button></div>
+           </form>
+         </div>
+
+         <div class="setnewAdmin inlineContract">
+           <form class="ui form" #newAdminForm="ngForm" (ngSubmit)="submitNewAdmin()">
+             <div id="setNewAdmin" class="ui input" >
+               <input type="text" label="adminID" name="adminID" id="adminID" [(ngModel)]="adminID">
+             </div>
+             <div id="btnAddNewAdmin" style="display: inline-block;"><button md-button type="submit" class="primary">Add Admin</button></div>
+           </form>
+         </div>
+
+         <div class="removeAdmin inlineContract">
+           <form class="ui form" #removeAdminForm="ngForm"  (ngSubmit)="submitRemoveAdmin()">
+             <div id="removeAdmin" class="ui input" >
+               <input type="text" label="removeAdminID" name="removeAdminID" id="removeAdminID" [(ngModel)]="removeAdminID">
+             </div>
+             <div id="btnRemoveAdmin" style="display: inline-block;"><button md-button type="submit" class="primary">Remove Admin</button></div>
+           </form>
+         </div>
+
+       </md-list-item>
+      </md-list>
+  </div>
+</div>
+</div>
+
+
+
+

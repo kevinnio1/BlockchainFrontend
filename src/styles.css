@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+button.ui.primary{
+  margin-right: 0px!important;
+}
+div.footer{
+  margin-top:50px!important;
+  height:50px;
+}
+button.buyOnebtn{
+  width:100%;
+}
+a.header.item{
+  font-size: 1.28rem;
+}

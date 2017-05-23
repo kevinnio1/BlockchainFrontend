@@ -1,0 +1,15 @@
+<div class="ui container">
+<md-menu class="inverted blue">
+    <label md-menu-item class="menu left" style="margin-right: 0px!important;"><h4>Connected peers: {{connectedPeers}}</h4></label>
+  <label class="menu left" style="margin-right: 0px!important;"><h4>WalletID: {{walletID}}</h4></label>
+    <label md-menu-item style="margin-left: 0px!important;" class="menu left"><h4>Howdy  {{username}} | Balance:  {{balance}}ETH</h4></label>
+  <label md-menu-item style="margin-left: 0px!important;" class="menu right"><h4><button md-button (click)="logout()">Logout</button></h4></label>
+</md-menu>
+
+
+
+<accounts-component [isAdminAccount]='isAdmin' ></accounts-component>
+  <contract-component [isAdminContract]='isAdmin'></contract-component>
+<vendingmachine-component [isAdminVending]='isAdmin' (updateBalance)="onUpdateBalance($event)"></vendingmachine-component>
+  <div class="footer"><h4>Copyright © Kevin Leyssens & Jeroen De Prest made possible by Ordina Belgium & Karel de Grote College</h4></div>
+</div>

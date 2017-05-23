@@ -1,0 +1,27 @@
+#btnRefill{
+  margin:2px;
+  display: inline-block;
+}
+
+div.vendingcomponent{
+  margin-top:3em;
+}
+
+form.buyOne{
+  text-align: center;
+}
+
+sm-button.buyOnebtn{
+  width:100%;
+}
+div.inlineVending{
+  max-width:33%;
+  display:inline-block;
+}
+div.setMinStock, div.setMaxStock{
+  margin-left:0.8em;
+  margin-bottom:1em;
+}
+div.adminDiv{
+  text-align: center;
+}

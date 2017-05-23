@@ -1,0 +1,45 @@
+<div class="ui middle aligned center aligned grid">
+  <div class="column">
+    <h2 class="ui teal image header">
+     <!-- <img src="../../../assets/img/logo.png" class="image">-->
+      <div class="content">
+        Sign up!
+      </div>
+    </h2>
+    <form class="ui large form" [formGroup]="registerForm" (ngSubmit)="submitLogin(registerForm.value, registerForm.valid)">
+      <div class="ui stacked segment">
+        <md-spinner class="inverted" text="Loading..."></md-spinner>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="user icon"></i>
+            <input id="username" label="username"   type="username" placeholder="Enter username...">
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="user icon"></i>
+            <input id="walletID" label="walletID"  type="walletID" placeholder="Enter a walletID...">
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="lock icon"></i>
+            <input label="Password" type="password" placeholder="Enter password...">
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="lock icon"></i>
+            <input label="Password again" type="password"  placeholder="Enter password...">
+          </div>
+        </div>
+        <button md-button type="submit" [disabled]="!registerForm.valid" class="ui fluid large teal">Register</button>
+        <!--<button md-button type="submit" class="ui fluid large teal">Register</button>-->
+     </div>
+
+     <div class="ui error message" [style.display] = "error==undefined? 'none' : 'block'">{{error}}</div>
+   </form>
+ </div>
+</div>

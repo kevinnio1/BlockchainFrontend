@@ -1,0 +1,14 @@
+div.footer{
+  background-color: #2185D0;
+  font-size:1rem;
+  min-height:2.85714286em;
+  -webkit-border-radius:.28571429rem;
+  -moz-border-radius:.28571429rem;
+  border-radius:.28571429rem;
+  text-align: center;
+  color:white;
+
+}
+div.footer h4 {
+  padding-top:1em;
+}

@@ -28,11 +28,10 @@ export class LoginComponent implements OnInit, OnDestroy {
       this.loginSubscription.unsubscribe();
   }
 
-  submitLogin(value:any, valid:boolean){
-    console.log(value);
+  submitLogin(model:User, valid:boolean){
     if(!valid) return;
     this.loading = true;
-    /*this.loginSubscription = this.authService.login(model.username, model.password).subscribe(result => {
+    this.loginSubscription = this.authService.login(model.username, model.password).subscribe(result => {
         this.error = undefined;
         this.router.navigate(['/']);
     },
@@ -40,6 +39,6 @@ export class LoginComponent implements OnInit, OnDestroy {
         this.error = 'Username or password is incorrect';
         console.log(error as string);
         this.loading = false;
-      });*/
+      });
   }
 }

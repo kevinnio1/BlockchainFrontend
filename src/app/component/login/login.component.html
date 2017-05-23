@@ -11,20 +11,18 @@
         <div class="field">
           <div class="ui left icon input">
             <i class="user icon"></i>
-            <input id="username" label="Username" type="username"  placeholder="Enter username...">
+            <input id="username" label="Username" type="username" formControlName="username"  placeholder="Enter username...">
           </div>
         </div>
         <div class="field">
           <div class="ui left icon input">
             <i class="lock icon"></i>
-            <input id="password" label="Password" type="password" placeholder="Enter password...">
+            <input id="password" label="Password" type="password" formControlName="password" placeholder="Enter password...">
           </div>
         </div>
-        <button md-button id="submit" type="submit"  class="ui fluid large teal">Login</button>
+        <button md-button id="submit" type="submit" [disabled]="!loginForm.valid"  class="ui fluid large teal">Login</button>
       </div>
-
       <div class="ui error message" [style.display] = "error==undefined? 'none' : 'block'">{{error}}</div>
-
     </form>
 
     <div class="ui message">

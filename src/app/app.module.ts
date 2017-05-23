@@ -16,7 +16,7 @@ import {BlockchainService} from "./service/blockchain.service";
 import {ProgressbarComponent} from "./component/progressbar/progressbar.component"
 import {ContractComponent} from "./component/contract/contract.component";
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-import {MdButtonModule, MdCheckboxModule,MdInputModule} from '@angular/material';
+import {MdButtonModule, MdCheckboxModule,MdInputModule, MdToolbarModule,MdMenuModule,MdProgressBarModule,MdProgressSpinnerModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -38,7 +38,11 @@ import {MdButtonModule, MdCheckboxModule,MdInputModule} from '@angular/material'
     NoopAnimationsModule,
     MdButtonModule,
     MdCheckboxModule,
-    MdInputModule
+    MdInputModule,
+    MdToolbarModule,
+    MdMenuModule,
+    MdProgressBarModule,
+    MdProgressSpinnerModule
   ],
   providers: [AuthGuard,CookieUtils,AuthenticationService,BlockchainService,SubscribeResultHandler],
   bootstrap: [AppComponent]

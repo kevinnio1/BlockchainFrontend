@@ -12,7 +12,6 @@ import {User} from "../../model/user/user";
 export class RegisterComponent implements OnInit, OnDestroy {
   private registerSubscription;
   private registerForm: FormGroup;
-  private teamId: string;
   loading = false;
   error = undefined;
 
@@ -24,17 +23,11 @@ export class RegisterComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.registerForm = this.fb.group({
       username: new FormControl('', [<any>Validators.required]),
-      walletID: new FormControl('', [<any>Validators.required]),
       "password": this.password,
       "passwordAgain": this.passwordAgain
     }, {validator: this.matchingPasswords('password', 'passwordAgain')});
 
-    /*this.route
-      .queryParams
-      .subscribe(params => {
-        this.teamId = params['team'];
-        console.log(this.teamId);
-      });*/
+  
   }
 
   ngOnDestroy() {
@@ -56,7 +49,6 @@ export class RegisterComponent implements OnInit, OnDestroy {
     //if(!valid) return;
     this.loading = true;
     console.log(model.username);
-    console.log(model.walletID);
     console.log(model.password);
 
     this.registerSubscription = this.authenticationService.register(model.username, model.password, model.walletID).subscribe(result => {

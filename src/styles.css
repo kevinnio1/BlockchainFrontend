@@ -12,3 +12,9 @@ button.buyOnebtn{
 a.header.item{
   font-size: 1.28rem;
 }
+button{
+  background-color: #2185d0;
+}
+button span{
+  color:white;
+}

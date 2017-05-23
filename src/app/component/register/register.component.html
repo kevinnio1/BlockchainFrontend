@@ -12,27 +12,20 @@
         <div class="field">
           <div class="ui left icon input">
             <i class="user icon"></i>
-            <input id="username" label="username"   type="username" placeholder="Enter username...">
-          </div>
-        </div>
-
-        <div class="field">
-          <div class="ui left icon input">
-            <i class="user icon"></i>
-            <input id="walletID" label="walletID"  type="walletID" placeholder="Enter a walletID...">
+            <input id="username" label="username" formControlName="username"   type="username" placeholder="Enter username...">
           </div>
         </div>
 
         <div class="field">
           <div class="ui left icon input">
             <i class="lock icon"></i>
-            <input label="Password" type="password" placeholder="Enter password...">
+            <input label="Password" type="password" formControlName="password" placeholder="Enter password...">
           </div>
         </div>
         <div class="field">
           <div class="ui left icon input">
             <i class="lock icon"></i>
-            <input label="Password again" type="password"  placeholder="Enter password...">
+            <input label="Password again" type="password" formControlName="passwordAgain" placeholder="Enter password...">
           </div>
         </div>
         <button md-button type="submit" [disabled]="!registerForm.valid" class="ui fluid large teal">Register</button>

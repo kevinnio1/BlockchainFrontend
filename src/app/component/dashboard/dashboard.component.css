@@ -12,3 +12,18 @@ div.footer{
 div.footer h4 {
   padding-top:1em;
 }
+md-toolbar.menu-self{
+  background-color: #2185d0;
+  border-radius: 5px;
+  color:white;
+}
+button.btnLogout{
+background-color: #4a3b3b;
+}
+button.span{
+color: white;
+}
+label{
+  margin-left:2em;
+}
+

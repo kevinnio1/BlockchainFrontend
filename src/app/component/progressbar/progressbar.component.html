@@ -1,13 +1,7 @@
 
 <div class="progress">
-    <span *ngIf="isAdminProgress" class="textProgressBarLeft">Minimum: {{minStockProgress}}</span> <span class="textProgressBarMid">Current stock: {{stockProgress}}</span><span *ngIf="isAdminProgress" class="textProgressBarRight">Maximum: {{maxStockProgress}}</span>
+    <span class="infoStock" *ngIf="isAdminProgress" class="textProgressBarLeft">Minimum: {{minStockProgress}}</span> <span class="textProgressBarMid">Current stock: {{stockProgress}}</span><span *ngIf="isAdminProgress" class="textProgressBarRight">Maximum: {{maxStockProgress}}</span>
     <section>
-   <md-progress-bar style="background:#2185d0;"
-          class="example-margin"
-          [mode]="indeterminate"
-          [color]="white"
-          [value]="20"
-          [bufferValue]="100">      
-         </md-progress-bar>
+<md-progress-bar mode="determinate" [value]="getPercentageValue()"></md-progress-bar>
     </section>
 </div>

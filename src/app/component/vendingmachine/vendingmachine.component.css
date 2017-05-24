@@ -25,3 +25,7 @@ div.setMinStock, div.setMaxStock{
 div.adminDiv{
   text-align: center;
 }
+
+div#btnBuy{
+  margin-top: 2em!important;
+}

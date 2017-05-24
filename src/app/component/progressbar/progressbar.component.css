@@ -2,10 +2,15 @@
 div.progress{
   font-size: 1.5em;
   line-height:2em;
-  height: 50px;
   font-weight:bold;
   width: 100%;
+  text-align: center;
+  margin-top: 1em;
 }
 span.textProgressBarMid, span.textProgressBarRight{
   margin-left:2em;
+}
+md-progress-bar{
+  height:20px;
+  border-radius: 5px;
 }

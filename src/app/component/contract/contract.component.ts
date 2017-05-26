@@ -14,12 +14,12 @@ import {BlockchainService} from "../../service/blockchain.service";
   providers: [CookieUtils]
 })
 
-export class ContractComponent implements OnInit{
+export class ContractComponent{
   @Input() isAdminContract:boolean;
   private supplierID:string;
   private adminID:string;
   private removeAdminID:string;
-  private loadingContract:boolean;
+  private loadingContract:boolean = false;
   constructor(private http:Http, private blockchainService: BlockchainService){}
 
 
@@ -85,7 +85,4 @@ export class ContractComponent implements OnInit{
     }
   }
 
-  ngOnInit(){
-
-  }
 }

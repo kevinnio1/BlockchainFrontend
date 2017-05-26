@@ -3,7 +3,9 @@
   <h2>CONTRACT COMPONENT: </h2><p><strong>All input boxes require the valid walletID</strong></p>
   <div class="ui segment aligneren">
     <div class="ui segment">
-      <md-list class="divided">
+      <md-progress-spinner
+        mode="indeterminate" *ngIf="loadingContract"></md-progress-spinner>
+      <md-list class="divided" *ngIf="!loadingContract">
        <md-list-item>
          <div class="setSupplier inlineContract">
            <form class="ui form" #supplierForm="ngForm" (ngSubmit)="submitSupplier()">

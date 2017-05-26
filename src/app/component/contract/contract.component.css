@@ -10,6 +10,9 @@ div.inlineContract{
 }
 div.setnewAdmin, div.removeAdmin{
   margin-left:0.8em;
+
+}
+div.setnewAdmin, div.removeAdmin, div.setSupplier{
   margin-bottom:1em;
 }
 md-progress-spinner.mat-progress-spinner{

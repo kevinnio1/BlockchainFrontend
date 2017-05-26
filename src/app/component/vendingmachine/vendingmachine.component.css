@@ -20,6 +20,8 @@ div.inlineVending{
 }
 div.setMinStock, div.setMaxStock{
   margin-left:0.8em;
+}
+div.setMinStock, div.setMaxStock, div.refill{
   margin-bottom:1em;
 }
 div.adminDiv{

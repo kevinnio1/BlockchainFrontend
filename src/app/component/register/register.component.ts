@@ -11,7 +11,7 @@ import {User} from "../../model/user/user";
 })
 export class RegisterComponent implements OnInit, OnDestroy {
   private registerSubscription;
-  private registerForm: FormGroup;
+  public registerForm: FormGroup;
   loading = false;
   error = undefined;
 

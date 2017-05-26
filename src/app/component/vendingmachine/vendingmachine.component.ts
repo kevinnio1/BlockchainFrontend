@@ -18,9 +18,9 @@ import {BlockchainService} from "../../service/blockchain.service";
 })
 
 export class VendingmachineComponent implements OnInit{
-  private stock:number=0;
-  private maxStock:number=20;
-  private minStock:number;
+  public stock:number=0;
+  public maxStock:number=20;
+  public minStock:number;
   @Input() isAdminVending:boolean;
   private amount:number;
   private amountMinStock:number;

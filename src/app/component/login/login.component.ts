@@ -11,7 +11,7 @@ import {Router} from "@angular/router";
 })
 export class LoginComponent implements OnInit, OnDestroy {
   private loginSubscription;
-  private loginForm: FormGroup;
+  public loginForm: FormGroup;
   loading = false;
   error = undefined;
   constructor(private authService: AuthenticationService, private router: Router, private fb: FormBuilder) { }

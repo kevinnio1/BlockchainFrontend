@@ -46,7 +46,8 @@ export class RegisterComponent implements OnInit, OnDestroy {
   }
 
   submitLogin(model: User, valid:boolean){
-    //if(!valid) return;
+    //todo: check username already exists
+    if(!valid) return;
     this.loading = true;
     console.log(model.username);
     console.log(model.password);

@@ -11,3 +11,6 @@
 sm-input{
   width: 100%;
 }
+md-spinner.inverted.mat-spinner{
+  margin:auto;
+}

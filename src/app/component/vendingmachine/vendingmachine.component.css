@@ -29,3 +29,6 @@ div.adminDiv{
 div#btnBuy{
   margin-top: 2em!important;
 }
+md-progress-spinner.mat-progress-spinner{
+  margin:auto;
+}

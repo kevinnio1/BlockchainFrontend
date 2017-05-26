@@ -7,8 +7,9 @@
       </div>
     </h2>
     <form class="ui large form" [formGroup]="registerForm" (ngSubmit)="submitLogin(registerForm.value, registerForm.valid)">
-      <div class="ui stacked segment">
-        <md-spinner class="inverted" text="Loading..."></md-spinner>
+       <md-spinner class="inverted" text="Loading..." *ngIf="loading"></md-spinner>
+      <div *ngIf="!loading" class="ui stacked segment">
+       
         <div class="field">
           <div class="ui left icon input">
             <i class="user icon"></i>

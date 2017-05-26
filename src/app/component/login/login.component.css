@@ -11,3 +11,7 @@
 sm-input{
   width: 100%;
 }
+md-progress-spinner.mat-progress-spinner{
+  margin:auto;
+}
+

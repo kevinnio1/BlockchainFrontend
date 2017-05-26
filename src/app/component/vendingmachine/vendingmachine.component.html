@@ -4,7 +4,9 @@
 
 <div class="ui segment">
   <div class="ui segment">
-    <md-list class="divided">
+     <md-progress-spinner
+        mode="indeterminate" *ngIf="loading"></md-progress-spinner>
+    <md-list class="divided" *ngIf="!loading">
       <div class="adminDiv" *ngIf="isAdminVending">
       <md-list-item>
 <div class="refill inlineVending">

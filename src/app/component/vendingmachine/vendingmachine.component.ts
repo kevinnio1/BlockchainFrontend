@@ -27,24 +27,29 @@ export class VendingmachineComponent implements OnInit{
   private amountMaxStock:number;
   private loadingRefill:boolean = true;
   private loadingBuyOne:boolean = false;
+  private loading:boolean=true;
   @Output() updateBalance = new EventEmitter();
   constructor(private http:Http, private blockchainService: BlockchainService){}
-
+  
+  //todo: empty fields after submit
 
 
 
 
   submitMin(){
     if(this.amountMinStock>0){
-      this.loadingRefill = true;
-
+      //this.loadingRefill = true;
+      this.loading = true;
       this.blockchainService.submitMin(this.amountMinStock).subscribe(
         result => {
           console.log(result);
           this.minStock = result;
-          this.loadingRefill = false;
+          //this.loadingRefill = false;
+          this.loading = false;
         },
-        error => {console.log(error as string);}
+        error => {console.log(error as string);
+        this.loading=false;
+      }
 
       );
     }else {
@@ -53,15 +58,16 @@ export class VendingmachineComponent implements OnInit{
   }
   submitMax(){
     if(this.amountMaxStock>0){
-      this.loadingRefill = true;
-
+      //this.loadingRefill = true;
+      this.loading=true;
       this.blockchainService.submitMax(this.amountMaxStock).subscribe(
         result => {
           console.log(result);
           this.maxStock = result;
-          this.loadingRefill = false;
+          this.loading=false;
         },
-        error => {console.log(error as string);}
+        error => {console.log(error as string);
+        this.loading=false;}
 
       );
     }else {
@@ -72,15 +78,17 @@ export class VendingmachineComponent implements OnInit{
 
   submitRefill(){
     if(this.amount>0){
-      this.loadingRefill = true;
-
+      //this.loadingRefill = true;
+      this.loading=true;
     this.blockchainService.submitRefill(this.amount).subscribe(
       result => {
         console.log(result);
         this.stock = result;
-        this.loadingRefill = false;
+        //this.loadingRefill = false;
+        this.loading=false;
       },
-      error => {console.log(error as string);}
+      error => {console.log(error as string);
+      this.loading=false;}
 
     );
     }else {
@@ -89,13 +97,17 @@ export class VendingmachineComponent implements OnInit{
   }
 
   submitBuyOne() {
-    this.loadingBuyOne = true;
+    //this.loadingBuyOne = true;
+    this.loading=true;
     this.blockchainService.buyOne().subscribe(
       result => {
-        this.loadingBuyOne = false;
+        //this.loadingBuyOne = false;
+        this.loading=false;
         this.stock = result;
         this.updateBalance.emit(null);
-      }
+      },
+      error => {console.log(error as string);
+      this.loading=false;}
     );
 
   }
@@ -108,7 +120,8 @@ export class VendingmachineComponent implements OnInit{
         //console.log(result);
         this.stock = result;
         //console.log(this.stock);
-        this.loadingRefill = false;
+        //this.loadingRefill = false;
+        this.loading=false;
 
       },
       error =>  {console.log(error as string);}
@@ -119,14 +132,17 @@ export class VendingmachineComponent implements OnInit{
         //console.log(result);
         this.maxStock = result;
         //console.log(this.stock);
-        this.loadingRefill = false;
+        //this.loadingRefill = false;
+        this.loading=false;
 
       },
       error =>  {console.log(error as string);}
     );
     this.blockchainService.getMinStock().subscribe(
       result => {this.minStock = result;
-      this.loadingRefill = false;},
+     // this.loadingRefill = false;
+      this.loading=false;  
+  },
       error => {
         console.log(error as string);
       }

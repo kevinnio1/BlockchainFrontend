@@ -29,10 +29,12 @@ export class ContractComponent{
       this.blockchainService.submitnewAdmin(this.adminID).subscribe(
         result=>{
           this.loadingContract=false;
+          this.adminID = null;
         },
         error => {
           console.log(error as string);
           this.loadingContract=false;
+          this.adminID = null;
         }
       );
 
@@ -49,10 +51,12 @@ export class ContractComponent{
       this.blockchainService.submitRemoveAdmin(this.removeAdminID).subscribe(
         result=>{
           this.loadingContract=false;
+          this.removeAdminID=null;
         },
         error => {
           console.log(error as string);
           this.loadingContract=false;
+          this.removeAdminID=null;
         }
       );
 
@@ -71,10 +75,12 @@ export class ContractComponent{
       this.blockchainService.submitSupplier(this.supplierID).subscribe(
         result=>{
           this.loadingContract=false;
+          this.supplierID=null;
         },
         error => {
           console.log(error as string);
           this.loadingContract=false;
+          this.supplierID=null;
         }
       );
 

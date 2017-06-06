@@ -8,6 +8,7 @@ import "rxjs/add/operator/catch";
 import {Http, RequestOptions,Headers, Response} from "@angular/http";
 import { SubscribeResultHandler, CookieUtils} from "../util/utils";
 import {AuthenticationService} from "./authentication.service";
+import { User } from "app/model/user/user";
 
 @Injectable()
 export class BlockchainService {
@@ -30,8 +31,13 @@ export class BlockchainService {
       .catch(this.subscribeResultHandler.handleError);
   }
 
-  public getAccounts(): Observable<String[]> {
+  /*public getAccounts(): Observable<String[]> {
     return this.http.get("/api/blockchain/getAccounts", this.authService.makeHeaderWithToken())
+      .map(this.subscribeResultHandler.handleResponse)
+      .catch(this.subscribeResultHandler.handleError);
+  }*/
+  public getAccounts(): Observable<User[]> {
+    return this.http.get("/api/blockchain/getAccountsWithUsername", this.authService.makeHeaderWithToken())
       .map(this.subscribeResultHandler.handleResponse)
       .catch(this.subscribeResultHandler.handleError);
   }

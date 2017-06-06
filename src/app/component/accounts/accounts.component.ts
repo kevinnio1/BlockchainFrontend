@@ -6,6 +6,7 @@ import {Component, Input, OnInit} from "@angular/core";
 import {Http} from "@angular/http";
 import {CookieUtils} from "../../util/utils";
 import {BlockchainService} from "../../service/blockchain.service";
+import { User } from "app/model/user/user";
 
 @Component({
   selector: 'accounts-component',
@@ -15,7 +16,7 @@ import {BlockchainService} from "../../service/blockchain.service";
 })
 
 export class AccountsComponent implements OnInit{
-  private accounts:String[]=[];
+  private accounts: User[]=[];
   @Input() isAdminAccount:boolean;
   constructor(private http:Http, private blockchainService: BlockchainService){}
 
@@ -24,11 +25,11 @@ export class AccountsComponent implements OnInit{
   ngOnInit(){
     this.blockchainService.getAccounts().subscribe(
       result => {
-        //console.log(result);
         this.accounts = result;
-        //console.log(this.accounts);
       },
       error =>  {console.log(error as string);}
     );
+   
+    ;
   }
 }

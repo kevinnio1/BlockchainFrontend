@@ -1,3 +1,20 @@
 div.accountscomponent{
   margin-top:3em;
 }
+table{
+  width: 100%;
+}
+td.username{
+  width:20%;
+}
+td.walletID{
+  width:60%;
+}
+td.walletID span{
+  margin-left: 10%;
+
+}
+td.balance{
+  text-align: right;
+  width:20%;
+}

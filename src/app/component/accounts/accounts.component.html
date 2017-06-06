@@ -3,7 +3,16 @@
   <div class="ui segment">
     <div class="ui segment">
       <md-list class="divided">
-        <md-list-item *ngFor="let a of accounts; let i = index"  >Account {{i+1}}: {{a}}
+        <md-list-item *ngFor="let a of accounts">
+          <table>
+            <tbody>
+              <tr>
+                <td class="username">{{a.username}}</td>
+                <td class="walletID"><span>{{a.walletID}}</span></td>
+                <td class="balance">{{a.balance | number : '1.2-2'}} ETH</td>
+                </tr>
+            </tbody>
+          </table>
         </md-list-item>
       </md-list>
   </div>
